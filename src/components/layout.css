@@ -31,3 +31,12 @@ h6 {
   color: var(--mainYellow);
   font-size: 2rem;
 }
+
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+}
