@@ -32,13 +32,18 @@ h6 {
   font-size: 2rem;
 }
 
-.default-background {
+.default-background,
+.about-background {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-position: center;
   background-size: cover;
+}
+
+.about-background {
+  min-height: 80vh;
 }
 
 .btn-yellow {
