@@ -2,14 +2,40 @@ import React, { Component } from "react"
 import Title from "../Globals/Title"
 import Img from "gatsby-image"
 
+const getCategories = items => {
+  let tempItems = items.map(items => {
+    return items.node.category
+  })
+  let tempCategories = new Set(tempItems)
+  let categories = Array.from(tempCategories)
+  categories = ["all", ...categories]
+  return categories
+}
+
 export default class Menu extends Component {
   constructor(props) {
     super(props)
     this.state = {
       items: props.items.edges,
       ProduceItems: props.items.edges,
+      categories: getCategories(props.items.edges),
     }
   }
+
+  handleItems = category => {
+    let tempItems = [...this.state.items]
+    if (category === "all") {
+      this.setState(() => {
+        return { ProduceItems: tempItems }
+      })
+    } else {
+      let items = tempItems.filter(({ node }) => node.category === category)
+      this.setState(() => {
+        return { ProduceItems: items }
+      })
+    }
+  }
+
   render() {
     if (this.state.items.length > 0) {
       return (
@@ -17,6 +43,24 @@ export default class Menu extends Component {
           <div className="container">
             <Title title="Our Price" />
             {/* categoryies */}
+            <div className="row mb-5">
+              <div className="col-10 mx-auto text-center">
+                {this.state.categories.map((category, index) => {
+                  return (
+                    <button
+                      type="button"
+                      key={index}
+                      className="btn btn-yellow text-capitalize m-3"
+                      onClick={() => {
+                        this.handleItems(category)
+                      }}
+                    >
+                      {category}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
             {/* items */}
             <div className="row">
               {this.state.ProduceItems.map(({ node }) => {
