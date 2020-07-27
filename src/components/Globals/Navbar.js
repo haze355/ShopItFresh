@@ -23,6 +23,11 @@ export default class Navbar extends Component {
         path: "../menu",
         text: "our price",
       },
+      {
+        id: 4,
+        path: "../giftsets",
+        text: "gift sets",
+      },
     ],
   }
 
