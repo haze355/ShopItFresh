@@ -6,7 +6,7 @@ export default function Contact(){
         <section className ="contact py-5">
             <Title title="contact us"/>
             <div className="row">
-                <div className="col-10 col-sm-8 col-md-6 ma-auto">
+                <div className="col-10 col-sm-8 col-md-6 mx-auto">
                     <form action="https://formspree.io/zhangbo@pdx.edu" method="POST">
                         {/* name */}
                         <div className = "form-group">
@@ -16,7 +16,7 @@ export default function Contact(){
                               ckassName="form-control" 
                               name ="name" 
                               id ="name"
-                              placeholder="FirstName LastName"
+                              placeholder="Your Name"
                             />
                         </div>
                         {/* email */}
@@ -45,7 +45,9 @@ export default function Contact(){
                         <button 
                             type="submit" 
                             className ="btn btn-yellow btn-block text-capitalize mt-5" 
-                        />
+                        >
+                            submit
+                        </button>
                     </form>
                 </div>
             </div>

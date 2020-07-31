@@ -17,7 +17,6 @@ const IndexPage = ({ data }) => (
       title="Shop It Fresh"
       styleClass="default-background"
     />
-    <Info />
     <Menu items={data.menu} />
     <Giftsets />
     <Contact />
