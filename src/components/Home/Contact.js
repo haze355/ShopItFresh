@@ -10,7 +10,7 @@ export default function Contact(){
                     <form action="https://formspree.io/zhangbo@pdx.edu" method="POST">
                         {/* name */}
                         <div className = "form-group">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name: </label>
                             <input 
                               type="text" 
                               ckassName="form-control" 
@@ -21,7 +21,7 @@ export default function Contact(){
                         </div>
                         {/* email */}
                         <div className = "form-group">
-                            <label htmlFor="eamil">Email</label>
+                            <label htmlFor="eamil">Email: </label>
                             <input 
                               type="text" 
                               ckassName="form-control" 
@@ -32,7 +32,7 @@ export default function Contact(){
                         </div>
                         {/*description*/}
                         <div className="form-group">
-                            <label htmlFor="description">Description</label>
+                            <label htmlFor="description">Description:</label>
                             <textarea 
                                 name="description" 
                                 id="description" 
