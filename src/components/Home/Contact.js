@@ -9,25 +9,25 @@ export default function Contact(){
                 <div className="col-10 col-sm-8 col-md-6 mx-auto">
                     <form action="https://formspree.io/zhangbo@pdx.edu" method="POST">
                         {/* name */}
-                        <div className = "form-group">
-                            <label htmlFor="name">Name: </label>
+                        <div className="form-group">
+                            <label htmlFor="name">Name:</label>
                             <input 
-                              type="text" 
-                              ckassName="form-control" 
-                              name ="name" 
-                              id ="name"
-                              placeholder="Your Name"
+                                type="text"
+                                name="name" 
+                                id="name" 
+                                className="form-control"  
+                                placeholder="Your Name..."
                             />
                         </div>
                         {/* email */}
-                        <div className = "form-group">
-                            <label htmlFor="eamil">Email: </label>
+                        <div className="form-group">
+                            <label htmlFor="email">Email:</label>
                             <input 
-                              type="text" 
-                              ckassName="form-control" 
-                              name ="email" 
-                              id ="email"
-                              placeholder="email@email"
+                                type="text"
+                                name="email" 
+                                id="email" 
+                                className="form-control"  
+                                placeholder="Your Email..."
                             />
                         </div>
                         {/*description*/}
