@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import { FaProductHunt } from "react-icons/fa"
 
 export default function Giftset({ giftset }) {
   return (
@@ -9,7 +10,13 @@ export default function Giftset({ giftset }) {
         <div className="card-body text-center">
           <h6>{giftset.title}</h6>
           <h6>${giftset.price}</h6>
-          <button className="btn btn-yellow mt-3 text-capitalize">
+          <button className="btn btn-yellow mt-3 text-capitalize snipcart-add-item"
+            data-item-id={giftset.id}
+            data-item-name={giftset.title}
+            data-item-price={giftset.price}
+            data-item-image={giftset.image.fluid.src}
+            data-item-url="http://localhost:8000/"
+            >
             add to cart
           </button>
         </div>
