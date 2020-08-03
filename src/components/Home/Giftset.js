@@ -15,7 +15,7 @@ export default function Giftset({ giftset }) {
             data-item-name={giftset.title}
             data-item-price={giftset.price}
             data-item-image={giftset.image.fluid.src}
-            data-item-url="http://localhost:8000/"
+            data-item-url="https://shopitfresh.netlify.app/"
             >
             add to cart
           </button>
